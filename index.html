@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+	<head>
+		<title>Khashing</title>
+		<link rel="Shortcut Icon" type="image/x-icon" href="./include/img/favicon.ico"/>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- JS -->
+			<!-- Jquery 3.3.1 min -->
+			<script src="./include/js/jquery.js"></script>
+			<script src="./include/js/ActionHandler.js"></script>
+			<script>
+				var actionHandler=new ActionHandler();
+				// Bootstrap 4 min
+				actionHandler.loadScript("bootstrap","bootstrap/js/bootstrap.js");
+				actionHandler.loadScript("bootstrap-bundle","bootstrap/js/bootstrap-bundle.js");
+				actionHandler.loadCSS("boostrap-css","bootstrap/css/bootstrap.css");
+				//Hamburgers
+				actionHandler.loadCSS("hamburgers","hamburgers/css/hamburgers.css");
+				//Fontawesome 
+				actionHandler.loadCSS("fontawesome","fontawesome/css/fontawesome.css");
+				// calendar
+				actionHandler.loadScript("calendar-snippet","calendar/js/calendar-snippet.js");
+				actionHandler.loadScript("calendar-js","calendar/js/calendar.js");
+				actionHandler.loadScript("moment","calendar/js/moment.js");
+				actionHandler.loadCSS("calendar-css","calendar/css/calendar.css");
+				//
+				actionHandler.loadScript("index-js","js/index.js");
+				actionHandler.loadCSS("index-css","css/index.css");
+				actionHandler.loadModuleScript("login","do_logged");
+				(new login_do_logged("#root")).run();
+			</script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div id="root"></div>
+		</div>
+	</body>
+</html>
