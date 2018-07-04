@@ -33,11 +33,11 @@ class home_index extends ActionHandler{
 			<div id="modal"></div>
 		`);
 		// 讀取左側清單
-		self.loadModuleScript("home","load_menu");
-		new home_load_menu("#accordion").run();
+		self.loadModuleScript("home","loadMenu");
+		new home_loadMenu("#accordion").run();
 		// 讀取右側內容
-		self.loadModuleScript("home","load_calendar");
-		new home_load_calendar("#content").run();
+		self.loadModuleScript("home","loadCalendar");
+		new home_loadCalendar("#content").run();
 		self.bindEvent();
 		self.userIconEvent();
 	}
@@ -57,8 +57,8 @@ class home_index extends ActionHandler{
 			(new employee_Show_Profile("employee","Show_Profile","#content")).run();*/
 		});
 		$(document).off("click","#logout").on("click","#logout",function(){
-			self.loadModuleScript("logout","do_logout");
-			(new logout_do_logout("body")).run();
+			self.loadModuleScript("logout","doLogout");
+			(new logout_doLogout("body")).run();
 		});
 	}
 	bindEvent(){
@@ -76,12 +76,12 @@ class home_index extends ActionHandler{
 			}
 		});
 		$(document).on("click","#berth_info",function(){
-			self.loadModuleScript("berth","do_info");
-			(new berth_do_info("#content")).run();
+			self.loadModuleScript("berth","doInfo");
+			(new berth_doInfo("#content")).run();
 		});
 		$(document).on("click","#customerinfo",()=>{
-			self.loadModuleScript("customer","show_page");
-			(new customer_show_page("#content").run());
+			self.loadModuleScript("customer","showPage");
+			(new customer_showPage("#content").run());
 		});
 		$("#shipinfo").on("click",()=>{
 		//	self.loadModuleScript("customer","show_page");

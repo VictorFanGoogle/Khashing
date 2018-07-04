@@ -1,4 +1,4 @@
-class calendar_get_calendar extends ActionHandler{
+class calendar_getCalendar extends ActionHandler{
 	constructor(position_id,calendar_id,data){
 		super();
 		this.php=false;
@@ -46,6 +46,15 @@ class calendar_get_calendar extends ActionHandler{
 		    useCreationPopup:true,
 		    useDetailPopup:true,
 		    template:{
+		    	alldayTitle:(e)=>{
+		    		
+		    	},
+		    	allday:(e)=>{
+		    		return `<i class="fas fa-ship"></i>`+e.title;
+		    	},
+		    	time:(e)=>{
+					return `<i class="fas fa-ship"></i>`+e.title;
+		    	},
 		    	//設定日期顯示方式
 		    	monthGridHeader:(e)=>{
 		    		var date=new Date(e.date);
@@ -60,8 +69,8 @@ class calendar_get_calendar extends ActionHandler{
 		    		return `查看更多`;
 		    	},
 		    	//設定星期樣式
-		    	monthDayname:(name)=>{
-		    		return `<div class="h5 text-center">`+name.label+`</div>`;
+		    	monthDayname:(e)=>{
+		    		return `<div class="h5 text-center">`+e.label+`</div>`;
 		    	}
 		    },
 		    month: {

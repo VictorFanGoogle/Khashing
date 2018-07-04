@@ -1,4 +1,4 @@
-class home_load_menu extends ActionHandler{
+class home_loadMenu extends ActionHandler{
 	constructor(position_id){
 		super();
 		this.php=false;

@@ -1,8 +1,8 @@
 class ActionHandler{
 	constructor(module,action){
 		this.php=true;
-		this.module=this.constructor.name.split("_")[0];
-		this.action=this.constructor.name.split("_")[1];
+		this.module=this.constructor.name.split("_",2)[0];
+		this.action=this.constructor.name.split("_",2)[1];
 		this.args=null;
 	}
 	run(){

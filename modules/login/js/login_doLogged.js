@@ -1,4 +1,4 @@
-class login_do_logged extends ActionHandler{
+class login_doLogged extends ActionHandler{
 	constructor(position_id){
 		super();
 		this.position_id=position_id;

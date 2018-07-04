@@ -1,4 +1,4 @@
-class logout_do_logout extends ActionHandler{
+class logout_doLogout extends ActionHandler{
 	constructor(position_id){
 		super();
 		this.position_id=position_id;

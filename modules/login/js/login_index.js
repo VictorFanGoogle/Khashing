@@ -22,7 +22,7 @@ class login_index extends ActionHandler{
 		$("body").addClass("login-bg");
 		// 登入事件
 		$("#login").on("click",function(){
-			self.loadModuleScript("login","do_login");
+			self.loadModuleScript("login","doLogin");
 			(new login_do_login(self.position_id)).run();
 		});
 		//密碼方框Enter登入
