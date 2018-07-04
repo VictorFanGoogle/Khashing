@@ -103,7 +103,7 @@ class home_load_menu extends ActionHandler{
 					<div class="card-body">
 			`;
 			for(var j in data[i]['item']){
-				html+=`<div>　<a id="`+data[i]["item"][j]["id"]+`" href="#">　`+data[i]["item"][j]["name"]+`</a></div>`;
+				html+=`<div id="`+data[i]["item"][j]["id"]+`" style="cursor:pointer;"><a>　　`+data[i]["item"][j]["name"]+`</a></div>`;
 			}
 			html+=`
 						</div>
