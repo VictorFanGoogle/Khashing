@@ -1,6 +1,6 @@
 <?php
     
-    class do_info implements Action{
+    class doInfo implements actionListener{
 		function ActionPerFormed($post){
 			return "this is info";
 		}
