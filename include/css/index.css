@@ -95,10 +95,14 @@ body{
 }
 .content_header{
 	border-left: 5px solid;
-    border-color: var(--theme-secondary-color);
+    border-color: var(--theme-secondary-color);    
+    margin: 20px;
 }
 .btn-color{
 	background-color: var(--theme-secondary-color);
 	border-color:var(--theme-secondary-color);
 	color: white;
+}
+.content_choose{
+	margin-left: 20px;
 }
