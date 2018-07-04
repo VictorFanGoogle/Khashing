@@ -7,7 +7,7 @@
 			}else{
 				$action="Do_Login";
 			}
-			require_once __ROOT__.'/modules/'.$module.'/php_action/'.$action.'.php';
+			require_once __ROOT__.'/modules/'.$module.'/php/'.$action.'.php';
 			$action_listener = new $action();
 			return $action_listener->ActionPerformed($event_message);
 		}
