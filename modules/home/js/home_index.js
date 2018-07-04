@@ -62,6 +62,7 @@ class home_index extends ActionHandler{
 		});
 	}
 	bindEvent(){
+		var self = this;
 		var $menu=$("#accordion");
 		var $icon=$("#hamburger-icon");
 		// 清單顯示/消失動畫
@@ -73,6 +74,23 @@ class home_index extends ActionHandler{
 				$icon.addClass("is-active");
 				$menu.css("display","block");
 			}
+		});
+		$(document).on("click","#berth_info",function(){
+			self.loadModuleScript("berth","do_info");
+			(new berth_do_info("#content")).run();
+		});
+		$(document).on("click","#customerinfo",()=>{
+			self.loadModuleScript("customer","show_page");
+			(new customer_show_page("#content").run());
+		});
+		$("#shipinfo").on("click",()=>{
+		//	self.loadModuleScript("customer","show_page");
+		});
+		$("#crewinfo").on("click",()=>{
+		//	self.loadModuleScript("customer","show_page");
+		});
+		$("#landinfo").on("click",()=>{
+		//	self.loadModuleScript("customer","show_page");
 		});
 	}
 }

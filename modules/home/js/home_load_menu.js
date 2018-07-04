@@ -82,10 +82,10 @@ class home_load_menu extends ActionHandler{
 			{
 				header:"基本資料",
 				item:[
-					{id:"",name:"船隻"},
-					{id:"",name:"客戶"},
-					{id:"",name:"員工"},
-					{id:"",name:"陸域"},
+					{id:"shipinfo",name:"船隻"},
+					{id:"customerinfo",name:"客戶"},
+					{id:"crewinfo",name:"員工"},
+					{id:"landinfo",name:"陸域"},
 				]
 			},
 		];
