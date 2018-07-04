@@ -2,7 +2,7 @@ class ActionHandler{
 	constructor(module,action){
 		this.php=true;
 		this.module=this.constructor.name.split("_")[0];
-		this.action=this.constructor.name.split("_")[1];
+		this.action=this.constructor.name.split("_",this.constructor.name.length)[1];
 		this.args=null;
 	}
 	run(){
@@ -26,6 +26,7 @@ class ActionHandler{
 						self.ajaxSuccess(json);
 					},
 					error:function(json){
+						console.log(json)
 						self.showModal("錯誤","伺服器錯誤!");
 					}
 				});

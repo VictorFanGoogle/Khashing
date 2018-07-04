@@ -10,7 +10,7 @@ class home_load_menu extends ActionHandler{
 			{
 				header:"停泊管理",
 				item:[
-					{id:"a123",name:"船舶資訊"},
+					{id:"berth_info",name:"船舶資訊"},
 					{id:"",name:"預約管理"},
 					{id:"",name:"船隻停泊收費紀錄"},
 				]

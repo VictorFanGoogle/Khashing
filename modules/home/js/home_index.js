@@ -76,7 +76,7 @@ class home_index extends ActionHandler{
 			}
 		});
 		$(document).on("click","#berth_info",function(){
-			self.loadModuleScript("berth","do_info");
+			self.loadModuleScript("berth","doInfo");
 			(new berth_do_info("#content")).run();
 		});
 		$(document).on("click","#customerinfo",()=>{
