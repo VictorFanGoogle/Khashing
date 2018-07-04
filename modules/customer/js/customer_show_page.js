@@ -8,7 +8,6 @@ class customer_show_page extends ActionHandler{
 		var self=this;
 		var html = `
 					<div class="content_header"> 客戶資料</div>
-					</br>
 					<div class="content_choose">
 					<button class="btn btn-primary theme-style" id="berth_customer">停泊客戶</button>
 					<button class="btn btn-outline-secondary" id="berth_customer">租賃客戶</a>
