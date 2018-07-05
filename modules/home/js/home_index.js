@@ -75,16 +75,26 @@ class home_index extends ActionHandler{
 				$menu.css("display","block");
 			}
 		});
+		//停泊管理
 		$(document).on("click","#berth_info",function(){
 			self.loadModuleScript("berth","doInfo");
 			(new berth_doInfo("#content")).run();
 		});
+		
+		//場地租借
+		$(document).on("click","#place_manage",()=>{
+			self.loadModuleScript("ckeditor","getckeditor");
+			(new ckeditor_getckeditor("#content","ckeid").run());
+		});
+		
+		//基本資料
 		$(document).on("click","#customerinfo",()=>{
 			self.loadModuleScript("customer","showPage");
 			(new customer_showPage("#content").run());
 		});
-		$("#shipinfo").on("click",()=>{
-		//	self.loadModuleScript("customer","show_page");
+		$(document).on("click","#shipinfo",()=>{
+			self.loadModuleScript("ship","showPage");
+			(new ship_showPage("#content").run());
 		});
 		$("#crewinfo").on("click",()=>{
 		//	self.loadModuleScript("customer","show_page");

@@ -21,16 +21,27 @@
 				//Fontawesome 
 				actionHandler.loadCSS("fontawesome","fontawesome/css/fontawesome.css");
 				// calendar
+<<<<<<< HEAD
+				actionHandler.loadScript("moment","fullcalendar/js/moment.js");
+				actionHandler.loadScript("fullcalendar-js","fullcalendar/js/fullcalendar.js");
+				actionHandler.loadScript("locale","fullcalendar/js/locale.js");
+				actionHandler.loadCSS("fullcalendar-css","fullcalendar/css/fullcalendar.css");
+				actionHandler.loadCSS("fullcalendar-theme","fullcalendar/css/fullcalendar-theme.css");
+=======
 				actionHandler.loadScript("calendar-snippet","calendar/js/calendar-snippet.js");
 				actionHandler.loadScript("calendar-js","calendar/js/calendar.js");
 				actionHandler.loadScript("moment","calendar/js/moment.js");
 				actionHandler.loadCSS("calendar-css","calendar/css/calendar.css");
+				//ckeditor
+				actionHandler.loadScript("ckeditor-js","ckeditor/js/ckeditor.js");
+>>>>>>> 9517c909df3f00eebb5e1cbbc88291124e38a5d3
 				//
 				actionHandler.loadScript("index-js","js/index.js");
 				actionHandler.loadCSS("index-css","css/stylesheets/index.css");
 				actionHandler.loadModuleScript("login","doLogged");
 				(new login_doLogged("#root")).run();
 			</script>
+			
 	</head>
 	<body>
 		<div class="container-fluid">
@@ -38,9 +49,6 @@
 		</div>
 	</body>
 </html>
-
-
-
 
 
 
