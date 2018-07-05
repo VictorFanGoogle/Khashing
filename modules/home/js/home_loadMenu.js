@@ -55,7 +55,7 @@ class home_loadMenu extends ActionHandler{
 				header:"場地租借",
 				item:[
 					{id:"",name:"場地租借"},
-					{id:"",name:"場地資訊管理"},
+					{id:"place_manage",name:"場地資訊管理"},
 					{id:"",name:"場地租借收費紀錄"},
 				]
 			},
