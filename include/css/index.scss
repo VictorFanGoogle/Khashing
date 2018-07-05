@@ -1,0 +1,137 @@
+$theme-color:rgb(45,90,139);
+$theme-secondary-color:rgb(20,36,64);
+$hover-color:#caddf1;
+body {
+  font-family: "Microsoft JhengHei";
+}
+
+.login-bg {
+  margin: 0;
+  padding: 0;
+  background: #000 url("../img/bg.jpg") center center fixed no-repeat;
+  background-size: cover;
+}
+
+.theme-style {
+  background-color: rgba(17, 39, 66, 0.88);
+  border-color: rgba(17, 39, 66, 0);
+  color: white;
+  &:hover {
+    background-color: rgba(17, 39, 66, 1);
+    border-color: rgba(17, 39, 66, 1);
+    color: white;
+  }
+}
+
+/*header*/
+
+#header {
+  background-color: $theme-color;
+}
+
+.navbar {
+  height: 70px;
+}
+
+.navbar-brand img {
+  height: 70px;
+  width: 140px;
+  vertical-align: top;
+}
+
+.hamburger-inner {
+  background-color: #fff;
+  width: 25px;
+  &::after, &::before {
+    background-color: #fff;
+    width: 25px;
+  }
+}
+
+[type=reset], [type=submit], button, html [type=button] {
+  -webkit-appearance: unset;
+}
+
+.navbar-text {
+  color: white;
+}
+
+/*accordion*/
+
+#accordion {
+  margin-left: -1rem;
+  padding: 0rem 0rem 0rem 0.5rem;
+  background-color: $theme-secondary-color;
+  height: 100vh;
+  .card {
+    border: 0px solid white;
+  }
+  .card-header {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+  }
+  div:hover.card-header {
+    cursor: pointer;
+    color: $theme-secondary-color;
+    background-color: $hover-color;
+    font-weight: bold;
+  }
+  .card-header {
+    color: white;
+    background-color: $theme-secondary-color;
+  }
+}
+
+.card-body {
+  color: white;
+  background-color: $theme-secondary-color;
+}
+
+#accordion .card-body {
+  padding: 0rem 0rem 0rem 0rem;
+  div {
+    padding: 0.5rem 0rem 0.5rem 0rem;
+    &:hover {
+      background-color: $hover-color;
+    }
+    a {
+      color: white;
+    }
+    &:hover a {
+      color: $theme-secondary-color;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+}
+
+/*userIcon*/
+
+#user-icon {
+  cursor: pointer;
+}
+
+.popover {
+  font-family: "Microsoft JhengHei";
+}
+
+.content_header {
+  border-left: 5px solid;
+  border-color: $theme-secondary-color;
+  margin: 20px;
+}
+
+.btn-color {
+  background-color: $theme-secondary-color;
+  border-color: $theme-secondary-color;
+  color: white;
+}
+
+.content_choose {
+  margin-left: 20px;
+}
+
+.content_content {
+  margin-left: 20px;
+  margin-top: 20px;
+}
