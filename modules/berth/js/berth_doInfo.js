@@ -1,4 +1,4 @@
-class berth_do_info extends ActionHandler{
+class berth_doInfo extends ActionHandler{
 	constructor(position_id){
 	    super();
 		this.position_id=position_id;
