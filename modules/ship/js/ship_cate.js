@@ -1,4 +1,4 @@
-class customer_cate extends ActionHandler {
+class ship_cate extends ActionHandler {
     constructor(position_id) {
         super();
         this.php = true;

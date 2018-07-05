@@ -1,4 +1,4 @@
-class customer_showPage extends ActionHandler{
+class ship_showPage extends ActionHandler{
 	constructor(position_id){
 		super();
 		this.php=false;
@@ -6,7 +6,7 @@ class customer_showPage extends ActionHandler{
 	}
 	showResult(data){
 		var self=this;
-		self.loadModuleScript("customer","cate");
+		self.loadModuleScript("ship","cate");
 		var html = `
 					<div class="content_header">&nbsp;客戶資料</div>
 					<div class="content_choose">
