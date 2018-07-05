@@ -24,9 +24,8 @@ class customer_showPage extends ActionHandler{
 		`
 		$(this.position_id).html(html);
 		$(document).on("click",".info",()=>{
-					console.log(event.target.id);
 					var info = new customer_cate(".info-table");
-					info.args = event.target.id;
+					info.addArg('cate',event.target.id);
 					info.cate = event.target.id;
 					info.run();
 				});
