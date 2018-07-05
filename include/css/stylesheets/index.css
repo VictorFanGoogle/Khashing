@@ -1,0 +1,150 @@
+/* line 4, ../sass/index.scss */
+body {
+  font-family: "Microsoft JhengHei";
+}
+
+/* line 8, ../sass/index.scss */
+.login-bg {
+  margin: 0;
+  padding: 0;
+  background: #000 url("../img/bg.jpg") center center fixed no-repeat;
+  background-size: cover;
+}
+
+/* line 15, ../sass/index.scss */
+.theme-style {
+  background-color: rgba(17, 39, 66, 0.88);
+  border-color: rgba(17, 39, 66, 0);
+  color: white;
+}
+/* line 19, ../sass/index.scss */
+.theme-style:hover {
+  background-color: #112742;
+  border-color: #112742;
+  color: white;
+}
+
+/* line 25, ../sass/index.scss */
+.btn-color {
+  background-color: #142440;
+  border-color: #142440;
+  color: white;
+}
+
+/*header*/
+/* line 32, ../sass/index.scss */
+#header {
+  background-color: #2d5a8b;
+}
+
+/* line 36, ../sass/index.scss */
+.navbar {
+  height: 70px;
+}
+
+/* line 40, ../sass/index.scss */
+.navbar-brand img {
+  height: 70px;
+  width: 140px;
+  vertical-align: top;
+}
+
+/* line 45, ../sass/index.scss */
+.navbar-text {
+  color: white;
+}
+
+/* line 48, ../sass/index.scss */
+.hamburger-inner {
+  background-color: #fff;
+  width: 25px;
+}
+/* line 51, ../sass/index.scss */
+.hamburger-inner::after, .hamburger-inner::before {
+  background-color: #fff;
+  width: 25px;
+}
+
+/* line 57, ../sass/index.scss */
+[type=reset], [type=submit], button, html [type=button] {
+  -webkit-appearance: unset;
+}
+
+/*accordion*/
+/* line 65, ../sass/index.scss */
+#accordion {
+  margin-left: -1rem;
+  padding: 0rem 0rem 0rem 0.5rem;
+  background-color: #142440;
+  height: 100vh;
+}
+/* line 70, ../sass/index.scss */
+#accordion .card {
+  border: 0px solid white;
+}
+/* line 73, ../sass/index.scss */
+#accordion .card-header {
+  color: white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  background-color: #142440;
+}
+/* line 79, ../sass/index.scss */
+#accordion div:hover.card-header {
+  cursor: pointer;
+  color: #142440;
+  background-color: #caddf1;
+  font-weight: bold;
+}
+/* line 85, ../sass/index.scss */
+#accordion .card-body {
+  color: white;
+  background-color: #142440;
+  padding: 0rem 0rem 0rem 0rem;
+}
+/* line 89, ../sass/index.scss */
+#accordion .card-body div {
+  padding: 0.5rem 0rem 0.5rem 0rem;
+}
+/* line 91, ../sass/index.scss */
+#accordion .card-body div:hover {
+  background-color: #caddf1;
+}
+/* line 94, ../sass/index.scss */
+#accordion .card-body div a {
+  color: white;
+}
+/* line 97, ../sass/index.scss */
+#accordion .card-body div:hover a {
+  color: #142440;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/*userIcon*/
+/* line 107, ../sass/index.scss */
+#user-icon {
+  cursor: pointer;
+}
+
+/* line 111, ../sass/index.scss */
+.popover {
+  font-family: "Microsoft JhengHei";
+}
+
+/*content*/
+/* line 116, ../sass/index.scss */
+#content .content_header {
+  border-left: 5px solid;
+  border-color: #142440;
+  margin: 20px;
+}
+/* line 121, ../sass/index.scss */
+#content .content_choose {
+  margin-left: 20px;
+}
+/* line 124, ../sass/index.scss */
+#content .content_content {
+  margin-left: 20px;
+  margin-top: 20px;
+}

@@ -47,7 +47,6 @@ class calendar_getCalendar extends ActionHandler{
 		    useDetailPopup:true,
 		    template:{
 		    	alldayTitle:(e)=>{
-		    		
 		    	},
 		    	allday:(e)=>{
 		    		return `<i class="fas fa-ship"></i>`+e.title;
@@ -84,7 +83,7 @@ class calendar_getCalendar extends ActionHandler{
 			self.bindEvent(e);
 		});
 		self.calendar.on('clickSchedule', function(event) {
-			console.log(event)
+			
 		});
 			}
 	//加入行程
