@@ -92,8 +92,9 @@ class home_index extends ActionHandler{
 			self.loadModuleScript("customer","showPage");
 			(new customer_showPage("#content").run());
 		});
-		$("#shipinfo").on("click",()=>{
-		//	self.loadModuleScript("customer","show_page");
+		$(document).on("click","#shipinfo",()=>{
+			self.loadModuleScript("ship","showPage");
+			(new ship_showPage("#content").run());
 		});
 		$("#crewinfo").on("click",()=>{
 		//	self.loadModuleScript("customer","show_page");
