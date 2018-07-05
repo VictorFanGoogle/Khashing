@@ -18,85 +18,17 @@ class customer_showPage extends ActionHandler{
 					</div>
 					<div class="content_content">
 						<table class="table info-table">
-							<thead>
-								<tr>
-									<th>姓名</th>
-									<th>電話</th>
-									<th>公司</th>
-									<th>公司電話</th>
-									<th>統編</th>
-									<th>Email</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>閜閜閜</td>
-									<td>0912345678</td>
-									<td>高雄科技大學</td>
-									<td>07-22222222</td>
-									<td>12345678</td>
-									<td>abc@gmail.com</td>
-								</tr>
-								<tr>
-									<td>閜閜閜</td>
-									<td>0912345678</td>
-									<td>高雄科技大學</td>
-									<td>07-22222222</td>
-									<td>12345678</td>
-									<td>abc@gmail.com</td>
-								</tr>
-								<tr>
-									<td>閜閜閜</td>
-									<td>0912345678</td>
-									<td>高雄科技大學</td>
-									<td>07-22222222</td>
-									<td>12345678</td>
-									<td>abc@gmail.com</td>
-								</tr>
-								<tr>
-									<td>閜閜閜</td>
-									<td>0912345678</td>
-									<td>高雄科技大學</td>
-									<td>07-22222222</td>
-									<td>12345678</td>
-									<td>abc@gmail.com</td>
-								</tr>
-								<tr>
-									<td>閜閜閜</td>
-									<td>0912345678</td>
-									<td>高雄科技大學</td>
-									<td>07-22222222</td>
-									<td>12345678</td>
-									<td>abc@gmail.com</td>
-								</tr>
-								<tr>
-									<td>閜閜閜</td>
-									<td>0912345678</td>
-									<td>高雄科技大學</td>
-									<td>07-22222222</td>
-									<td>12345678</td>
-									<td>abc@gmail.com</td>
-								</tr>
-								<tr>
-									<td>閜閜閜</td>
-									<td>0912345678</td>
-									<td>高雄科技大學</td>
-									<td>07-22222222</td>
-									<td>12345678</td>
-									<td>abc@gmail.com</td>
-								</tr>
-								<tr>
-									<td>閜閜閜</td>
-									<td>0912345678</td>
-									<td>高雄科技大學</td>
-									<td>07-22222222</td>
-									<td>12345678</td>
-									<td>abc@gmail.com</td>
-								</tr>
-							</tbody>
+							
 						</table>
 					</div>
 		`
 		$(this.position_id).html(html);
+		$(document).on("click",".info",()=>{
+					console.log(event.target.id);
+					var info = new customer_cate(".info-table");
+					info.args = event.target.id;
+					info.cate = event.target.id;
+					info.run();
+				});
 	}
 }
