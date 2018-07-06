@@ -1,41 +1,176 @@
-/*
-Error: Invalid CSS after "...24ac349fc35265e": expected "{", was ""
-        on line 156 of D:/Wamp/www/Khashing/include/css/sass/index.scss
+/* line 4, ../sass/index.scss */
+body {
+  font-family: "Microsoft JhengHei";
+}
 
-151: .content_content {
-152:   margin-left: 20px;
-153:   margin-top: 20px;
-154: }
-155: >>>>>>> 92c753b8877d00e32eb1736e424ac349fc35265e
+/* line 8, ../sass/index.scss */
+.login-bg {
+  margin: 0;
+  padding: 0;
+  background: #000 url("../img/bg.jpg") center center fixed no-repeat;
+  background-size: cover;
+}
 
-Backtrace:
-D:/Wamp/www/Khashing/include/css/sass/index.scss:156
-D:/Ruby/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:1207:in `expected'
-D:/Ruby/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:1137:in `expected'
-D:/Ruby/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:1132:in `tok!'
-D:/Ruby/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:665:in `block'
-D:/Ruby/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:658:in `ruleset'
-D:/Ruby/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:684:in `block_child'
-D:/Ruby/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:677:in `block_contents'
-D:/Ruby/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:125:in `stylesheet'
-D:/Ruby/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:41:in `parse'
-D:/Ruby/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/engine.rb:409:in `_to_tree'
-D:/Ruby/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/engine.rb:284:in `render'
-D:/Ruby/lib/ruby/gems/2.5.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
-D:/Ruby/lib/ruby/gems/2.5.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
-D:/Ruby/lib/ruby/gems/2.5.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
-D:/Ruby/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
-D:/Ruby/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-D:/Ruby/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `each'
-D:/Ruby/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-D:/Ruby/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
-D:/Ruby/lib/ruby/gems/2.5.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:331:in `block in watch'
-D:/Ruby/lib/ruby/gems/2.5.0/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-D:/Ruby/lib/ruby/gems/2.5.0/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-D:/Ruby/lib/ruby/gems/2.5.0/gems/sass-3.4.25/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-D:/Ruby/lib/ruby/gems/2.5.0/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...24ac349fc35265e\": expected \"{\", was \"\"\A         on line 156 of D:/Wamp/www/Khashing/include/css/sass/index.scss\A \A 151: .content_content {\A 152:   margin-left: 20px;\A 153:   margin-top: 20px;\A 154: }\A 155: >>>>>>> 92c753b8877d00e32eb1736e424ac349fc35265e"; }
+/* line 15, ../sass/index.scss */
+.theme-style {
+  background-color: rgba(17, 39, 66, 0.88);
+  border-color: rgba(17, 39, 66, 0);
+  color: white;
+}
+/* line 19, ../sass/index.scss */
+.theme-style:hover {
+  background-color: #112742;
+  border-color: #112742;
+  color: white;
+}
+
+/*header*/
+/* line 28, ../sass/index.scss */
+#header {
+  background-color: #2d5a8b;
+}
+
+/* line 32, ../sass/index.scss */
+.navbar {
+  height: 70px;
+}
+
+/* line 36, ../sass/index.scss */
+.navbar-brand img {
+  height: 70px;
+  width: 140px;
+  vertical-align: top;
+}
+
+/* line 42, ../sass/index.scss */
+.hamburger-inner {
+  background-color: #fff;
+  width: 25px;
+}
+/* line 45, ../sass/index.scss */
+.hamburger-inner::after, .hamburger-inner::before {
+  background-color: #fff;
+  width: 25px;
+}
+
+/* line 51, ../sass/index.scss */
+[type=reset], [type=submit], button, html [type=button] {
+  -webkit-appearance: unset;
+}
+
+/* line 55, ../sass/index.scss */
+.navbar-text {
+  color: white;
+}
+
+/*accordion*/
+/* line 61, ../sass/index.scss */
+#accordion {
+  margin-left: -1rem;
+  padding: 0rem 0rem 0rem 0.5rem;
+  background-color: #142440;
+  height: 100vh;
+}
+/* line 66, ../sass/index.scss */
+#accordion .card {
+  border: 0px solid white;
+}
+/* line 69, ../sass/index.scss */
+#accordion .card-header {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+/* line 73, ../sass/index.scss */
+#accordion div:hover.card-header {
+  cursor: pointer;
+  color: #142440;
+  background-color: #caddf1;
+  font-weight: bold;
+}
+/* line 79, ../sass/index.scss */
+#accordion .card-header {
+  color: white;
+  background-color: #142440;
+}
+
+/* line 85, ../sass/index.scss */
+.card-body {
+  color: white;
+  background-color: #142440;
+}
+
+/* line 90, ../sass/index.scss */
+#accordion .card-body {
+  padding: 0rem 0rem 0rem 0rem;
+}
+/* line 92, ../sass/index.scss */
+#accordion .card-body div {
+  padding: 0.5rem 0rem 0.5rem 0rem;
+}
+/* line 94, ../sass/index.scss */
+#accordion .card-body div:hover {
+  background-color: #caddf1;
+}
+/* line 97, ../sass/index.scss */
+#accordion .card-body div a {
+  color: white;
+}
+/* line 100, ../sass/index.scss */
+#accordion .card-body div:hover a {
+  color: #142440;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/*userIcon*/
+/* line 110, ../sass/index.scss */
+#user-icon {
+  cursor: pointer;
+}
+
+/* line 114, ../sass/index.scss */
+.popover {
+  font-family: "Microsoft JhengHei";
+}
+
+/* line 118, ../sass/index.scss */
+.content_header {
+  border-left: 5px solid;
+  border-color: #142440;
+  margin: 20px;
+  font-size: 1.5rem;
+}
+
+/* line 124, ../sass/index.scss */
+.btn-color {
+  background-color: #142440;
+  border-color: #142440;
+  color: white;
+}
+
+/* line 130, ../sass/index.scss */
+.content_choose {
+  margin-left: 20px;
+}
+
+/* line 134, ../sass/index.scss */
+.content_content {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+/*fullcalendar*/
+/* line 140, ../sass/index.scss */
+.fc .fc-today.alert.alert-info {
+  background-color: #e6eeff;
+  color: black;
+}
+/* line 144, ../sass/index.scss */
+.fc .fc-header.card-header, .fc .table-active {
+  background-color: #142440;
+  color: white;
+}
+/* line 148, ../sass/index.scss */
+.fc .fc-event {
+  cursor: pointer;
+}
