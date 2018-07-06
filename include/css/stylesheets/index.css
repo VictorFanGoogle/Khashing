@@ -175,15 +175,30 @@ body {
   cursor: pointer;
 }
 
-/* line 153, ../sass/index.scss */
+/* line 152, ../sass/index.scss */
 .fc-create {
   background-color: #dc3545;
   border-color: #dc3545;
   color: white;
 }
-/* line 157, ../sass/index.scss */
+/* line 156, ../sass/index.scss */
 .fc-create:hover {
   background-color: #dc3545;
   border-color: #dc3545;
   color: white;
+}
+
+/* line 163, ../sass/index.scss */
+.info_search {
+  background-image: url("../../img/search.png");
+  background-position: 6px 8px;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 12px 20px 12px 40px;
+  border: 0;
+}
+
+/* line 171, ../sass/index.scss */
+#search_info {
+  padding: 0px;
 }

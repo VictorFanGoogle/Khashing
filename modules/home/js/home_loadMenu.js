@@ -119,6 +119,6 @@ class home_loadMenu extends ActionHandler{
 			$("[data-toggle=collapse] i").attr("class","fas fa-angle-down");
 		});
 		
-
+		
 	}
 }
