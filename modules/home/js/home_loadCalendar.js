@@ -5,12 +5,15 @@ class home_loadCalendar extends ActionHandler{
 		this.position_id=position_id;
 	}
 	showResult(){
+
+		this.loadModuleScript("calendar","getCalendar");
+		var calendar=(new calendar_getCalendar("#content","calendar"));
 		var data=[
 			{
 				title: 'All Day Event',
 				start: '2018-07-05',
 				color:"#FF8C00"
-				
+
 			},
 			{
 				title: 'Long Event',
@@ -63,8 +66,12 @@ class home_loadCalendar extends ActionHandler{
 				start: '2018-07-28'
 			}
 		];
-		this.loadModuleScript("calendar","getCalendar");
-		var calendar=(new calendar_getCalendar("#content","calendar",data));
+		var list=`
+			<div class="text-center">
+				<button id="calendar-create" class="btn fc-create">建立行程</button>
+			</div>
+		`;
+		calendar.addArgs(data,list);
 		calendar.run();
 	}
 }
