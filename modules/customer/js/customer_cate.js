@@ -21,7 +21,6 @@ class customer_cate extends ActionHandler {
                 <th scope="col">負責人</th>
                 <th scope="col">負責人電話</th>
             </tr></thead><tbody id="info_tbody"><tr>`;
-        console.log(data['0'])
         for (var i = 0; i < data.length; i++) {
             html += '<td id="' + data[i]['CustomerID'] + '">' + data[i]['CustomerName'] + '</td>';
             html += '<td>' + data[i]['CustomerPhoneNum'] + '</td>';
