@@ -16,7 +16,7 @@ class calendar_getCalendar extends ActionHandler{
 					<div id="`+this.calendar_id+`"></div>
 				</div>
 				
-			</div
+			</div>
 			
 		`;
 		$(this.position_id).html(html);
