@@ -23,7 +23,8 @@ class home_loadCalendar extends ActionHandler{
 			{
 				id: 999,
 				title: 'Repeating Event',
-				start: '2018-07-05T16:00:00'
+				start: '2018-07-05T16:00:00',
+				test:"123"
 			},
 			{
 				id: 999,

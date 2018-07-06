@@ -64,15 +64,18 @@ class home_index extends ActionHandler{
 	bindEvent(){
 		var self = this;
 		var $menu=$("#accordion");
+		var $content=$("#content");
 		var $icon=$("#hamburger-icon");
 		// 清單顯示/消失動畫
 		$icon.on("click",()=>{
-			if($menu.css("display")=="block"){
+			if($menu.hasClass("d-none")){
 				$icon.removeClass("is-active");
-				$menu.css("display","none");
+				$menu.removeClass("d-none");
+				$content.removeClass("col-md-12");
 			}else{
 				$icon.addClass("is-active");
-				$menu.css("display","block");
+				$menu.addClass("d-none");
+				$content.addClass("col-md-12");
 			}
 		});
 		//首頁

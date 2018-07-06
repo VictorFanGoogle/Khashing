@@ -53,13 +53,16 @@ class calendar_getCalendar extends ActionHandler{
 				console.log(eventObj)
 			},
 			eventMouseover:(event, jsEvent, view)=>{
-				console.log(event, jsEvent, view)
+				$(jsEvent.currentTarget).popover("show");
+			},
+			eventMouseout:(event, jsEvent, view)=>{
+				$(jsEvent.currentTarget).popover("hide");
 			},
 			eventRender:(event,element,view)=>{
 				var id=event._id;
-				console.log(event,element,view);
 				$(element).popover({
-			    	content:id
+			    	content:self.eventPopTemplate(event),
+			    	placement:"top"
 			    }); 
 			},
 			//日期事件(點擊&框選)
@@ -79,5 +82,8 @@ class calendar_getCalendar extends ActionHandler{
 	addArgs(data,list){
 		this.data=data;
 		this.list=list;
+	}
+	eventPopTemplate(data){
+		return data._id;
 	}
 }
