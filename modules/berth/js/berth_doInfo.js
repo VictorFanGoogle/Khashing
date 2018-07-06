@@ -218,22 +218,22 @@ class berth_doInfo extends ActionHandler{
 		    		</div>
 	    		</div>
 	    		<div id="H1">
-	    			<div id="H1_e1" style='position:absolute;top:${F_initTop + F_height * 6}%;left:${F_initLeft + H_width * 28}%;width:${H_width * 1.5}%;height:${G_height}%;background-color:WHITE;'>
+	    			<div id="H1_e1" style='position:absolute;top:${F_initTop + F_height * 6}%;left:${F_initLeft + H_width * 28}%;width:${H_width * 2}%;height:${G_height}%;background-color:WHITE;'>
 		    			<p>e1</p>
 		    		</div>
-		    		<div id="H1_e2" style='position:absolute;top:${F_initTop + F_height * 6}%;left:${F_initLeft + H_width * 29}%;width:${H_width * 1.5}%;height:${G_height}%;background-color:GREEN;'>
+		    		<div id="H1_e2" style='position:absolute;top:${F_initTop + F_height * 6}%;left:${F_initLeft + H_width * 29 + 2.5}%;width:${H_width * 2}%;height:${G_height}%;background-color:GREEN;'>
 		    			<p>e2</p>
 		    		</div>
-		    		<div id="H1_e3" style='position:absolute;top:${F_initTop + F_height * 6}%;left:${F_initLeft + H_width * 30}%;width:${H_width}%;height:${G_height}%;background-color:WHITE;'>
+		    		<div id="H1_e3" style='position:absolute;top:${F_initTop + F_height * 6}%;left:${F_initLeft + H_width * 31 + 2.5}%;width:${H_width * 2}%;height:${G_height}%;background-color:WHITE;'>
 		    			<p>e3</p>
 		    		</div>
-		    		<div id="H1_e4" style='position:absolute;top:${F_initTop + F_height * 6}%;left:${F_initLeft + H_width * 31}%;width:${H_width}%;height:${G_height}%;background-color:GREEN;'>
+		    		<div id="H1_e4" style='position:absolute;top:${F_initTop + F_height * 6}%;left:${F_initLeft + H_width * 33 + 2.5}%;width:${H_width * 2}%;height:${G_height}%;background-color:GREEN;'>
 		    			<p>e4</p>
 		    		</div>
-		    		<div id="H1_e5" style='position:absolute;top:${F_initTop + F_height * 6}%;left:${F_initLeft + H_width * 36 - 1}%;width:${H_width}%;height:${G_height}%;background-color:WHITE;'>
+		    		<div id="H1_e5" style='position:absolute;top:${F_initTop + F_height * 6}%;left:${F_initLeft + H_width * 36}%;width:${H_width}%;height:${G_height}%;background-color:WHITE;'>
 		    			<p>e5</p>
 		    		</div>
-		    		<div id="H1_e6" style='position:absolute;top:${F_initTop + F_height * 6}%;left:${F_initLeft + H_width * 37 - 1}%;width:${H_width}%;height:${G_height}%;background-color:WHITE;'>
+		    		<div id="H1_e6" style='position:absolute;top:${F_initTop + F_height * 6}%;left:${F_initLeft + H_width * 37}%;width:${H_width}%;height:${G_height}%;background-color:WHITE;'>
 		    			<p>e6</p>
 		    		</div>
 	    		</div>
