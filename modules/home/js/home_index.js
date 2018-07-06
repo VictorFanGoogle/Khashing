@@ -13,7 +13,7 @@ class home_index extends ActionHandler{
 						<span class="hamburger-inner"></span>
 					</span>
 				</div>
-				<a class="navbar-brand mb-1" href="./">
+				<a class="navbar-brand mb-1" href="#">
 					<img class="img" src="./include/img/logo.png" alt="brand">
 				</a>
 				<div class="navbar-text mt-2">
@@ -74,6 +74,14 @@ class home_index extends ActionHandler{
 				$icon.addClass("is-active");
 				$menu.css("display","block");
 			}
+		});
+		//首頁
+		$(document).on("click",".navbar-brand",function(){
+			self.loadModuleScript("home","loadMenu");
+			new home_loadMenu("#accordion").run();
+			// 讀取右側內容
+			self.loadModuleScript("home","loadCalendar");
+			new home_loadCalendar("#content").run();
 		});
 		//停泊管理
 		$(document).on("click","#berth_info",function(){

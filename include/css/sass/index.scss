@@ -136,7 +136,7 @@ body {
   margin-top: 20px;
 }
 /*fullcalendar*/
-.fc {
+.fc-view{
   .fc-today.alert.alert-info {
     background-color:#e6eeff;
     color:black;
@@ -149,6 +149,17 @@ body {
     cursor: pointer;
   }
 }
+.fc-create{
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color:white;
+  &:hover {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color:white;
+  }
+}
+//info
 .info_search{
   background-image: url('../../img/search.png');
   background-position: 6px 8px;

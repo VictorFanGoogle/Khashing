@@ -1,33 +1,37 @@
 class calendar_getCalendar extends ActionHandler{
-	constructor(position_id,calendar_id,data){
+	constructor(position_id,calendar_id){
 		super();
 		this.php=false;
 		this.position_id=position_id;
-		this.data=data;
 		this.calendar_id=calendar_id;
+		this.data=null;
+		this.list=null;
 	}
 	showResult(){
-		var html=`
-			<div class="row mt-2>
-				<div id="`+this.calendar_id+`-list" class="mt-2 col-sm-2">
-				`+this.showList()+`
-				</div>
-				<div id="`+this.calendar_id+`-view" class="mt-2 col-sm-10" style="height:98vh">
-					<div id="`+this.calendar_id+`"></div>
+		if(this.data!=null){
+			var html=`
+				<div class="row mt-2">
+					<div id="`+this.calendar_id+`-list" class="mt-2 col-md-2 fc-list">
+			`;
+			if(this.list!=null){
+				html+=this.list;
+			}
+			html+=`	</div>
+					<div id="`+this.calendar_id+`-view" class="mt-2 col-md-10 fc-view" style="height:98vh">
+						<div id="`+this.calendar_id+`"></div>
+					</div>
 				</div>
 				
-			</div>
-			
-		`;
-		$(this.position_id).html(html);
-		this.createCalendar();
+			`;
+			$(this.position_id).html(html);
+			this.createCalendar();
+		}else{
+		//請使用addData()加入資料
+			this.showModal("錯誤","資料未讀取");
+		}
+
 	}
-	showList(){
-		var html=`
-				<div id="`+this.calendar_id+`-create" class="btn btn-primary theme-style">建立行程</div>
-		`
-		return html;
-	}
+
 	//建立行事曆
 	createCalendar(){
 		var self=this;
@@ -44,7 +48,21 @@ class calendar_getCalendar extends ActionHandler{
 			events:self.data,
 		    eventLimit:true,
 		    eventColor: 'rgb(20,36,64)',
-		    //日期事件
+			//資料事件(點擊&滑鼠)
+			eventClick: (eventObj)=>{
+				console.log(eventObj)
+			},
+			eventMouseover:(event, jsEvent, view)=>{
+				console.log(event, jsEvent, view)
+			},
+			eventRender:(event,element,view)=>{
+				var id=event._id;
+				console.log(event,element,view);
+				$(element).popover({
+			    	content:id
+			    }); 
+			},
+			//日期事件(點擊&框選)
 		    selectable:true,
 		    dayClick: (date,jsEvent, view)=>{
 		    	console.log(date.format());
@@ -53,13 +71,13 @@ class calendar_getCalendar extends ActionHandler{
 				endDate=moment(endDate).add(-1, 'days');
 				alert('selected ' + startDate.format() + ' to ' + endDate.format());
 			},
-			//資料事件
-			eventClick: (eventObj)=>{
-				console.log(eventObj)
-			},
-			eventMouseover:(event, jsEvent, view)=>{
-
-			}
+			//日期事件
+			editable:true,
 		});
+	}
+	//呼叫時加入資料
+	addArgs(data,list){
+		this.data=data;
+		this.list=list;
 	}
 }

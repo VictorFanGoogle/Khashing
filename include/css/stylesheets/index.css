@@ -161,21 +161,34 @@ body {
 
 /*fullcalendar*/
 /* line 140, ../sass/index.scss */
-.fc .fc-today.alert.alert-info {
+.fc-view .fc-today.alert.alert-info {
   background-color: #e6eeff;
   color: black;
 }
 /* line 144, ../sass/index.scss */
-.fc .fc-header.card-header, .fc .table-active {
+.fc-view .fc-header.card-header, .fc-view .table-active {
   background-color: #142440;
   color: white;
 }
 /* line 148, ../sass/index.scss */
-.fc .fc-event {
+.fc-view .fc-event {
   cursor: pointer;
 }
 
 /* line 152, ../sass/index.scss */
+.fc-create {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: white;
+}
+/* line 156, ../sass/index.scss */
+.fc-create:hover {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: white;
+}
+
+/* line 163, ../sass/index.scss */
 .info_search {
   background-image: url("../../img/search.png");
   background-position: 6px 8px;
@@ -185,7 +198,7 @@ body {
   border: 0;
 }
 
-/* line 160, ../sass/index.scss */
+/* line 171, ../sass/index.scss */
 #search_info {
   padding: 0px;
 }
