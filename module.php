@@ -5,6 +5,7 @@
 	require_once __ROOT__."/include/php/model.php";
 	require_once __ROOT__."/include/php/actionListener.php";
 	session_start();
+	/**/
 	echo json_encode((new Main())->run());
 	class Main{
 		function __construct(){
