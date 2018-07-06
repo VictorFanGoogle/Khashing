@@ -174,3 +174,18 @@ body {
 .fc .fc-event {
   cursor: pointer;
 }
+
+/* line 152, ../sass/index.scss */
+.info_search {
+  background-image: url("../../img/search.png");
+  background-position: 6px 8px;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 12px 20px 12px 40px;
+  border: 0;
+}
+
+/* line 160, ../sass/index.scss */
+#search_info {
+  padding: 0px;
+}

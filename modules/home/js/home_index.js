@@ -102,5 +102,33 @@ class home_index extends ActionHandler{
 		$("#landinfo").on("click",()=>{
 		//	self.loadModuleScript("customer","show_page");
 		});
+		$(document).on("keyup",".info_search",()=>{
+            var input, filter, table, tr, td, i;
+            input = document.getElementById("info_search");
+            console.log(input)
+            filter = input.value.toUpperCase();
+            console.log(filter)
+            table = document.getElementById("info_tbody");
+            console.log(table)
+            tr = table.getElementsByTagName("tr");
+            console.log(tr)
+            for (i = 0; i < tr.length; i++) {
+                for(var j = 0;j<tr[i].getElementsByTagName('td').length;j++){
+                    var check = 0;
+                    td = tr[i].getElementsByTagName("td")[j];
+                    if (td) {
+                        if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                            check = 1;
+                        } else {
+                            tr[i].style.display = "none";
+                        }
+                    }
+                    if(check==1){
+                        break;
+                    }
+                }
+            }
+        });
 	}
 }
