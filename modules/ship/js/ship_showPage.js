@@ -8,13 +8,13 @@ class ship_showPage extends ActionHandler{
 		var self=this;
 		self.loadModuleScript("ship","cate");
 		var html = `
-					<div class="content_header">&nbsp;客戶資料</div>
+					<div class="content_header">&nbsp;船體基本資料</div>
 					<div class="content_choose">
-						<button class="btn btn-primary theme-style content_choose info" id="berth_customer">停泊客戶</button>
-						<button class="btn btn-outline-secondary content_choose info" id="rent_customer">租賃客戶</a>
-						<button class="btn btn-outline-secondary content_choose info" id="rentland_customer">陸域租戶</a>
-						<button class="btn btn-outline-secondary content_choose info" id="repair_customer">維修客戶</a>
-					    <button class="btn btn-outline-secondary content_choose info" id="port_customer">下水碼頭客戶</a>
+						<button class="btn btn-primary theme-style content_choose info_ship" id="our_ship">&nbsp;公 司 遊 艇&nbsp;</button>
+						<button class="btn btn-outline-secondary content_choose info_ship" id="berth_ship">&nbsp;停 泊 遊 艇&nbsp;</a>
+						<button class="btn btn-outline-secondary content_choose info_ship" id="rent_ship">&nbsp;租 賃 遊 艇&nbsp;</a>
+						<button class="btn btn-outline-secondary content_choose info_ship" id="repair_ship">&nbsp;維 修 遊 艇&nbsp;</a>
+					    <button class="btn btn-outline-secondary content_choose info_ship" id="port_ship">下水碼頭遊艇</a>
 					</div>
 					<div class="content_content">
 						<table class="table info-table">
@@ -23,8 +23,8 @@ class ship_showPage extends ActionHandler{
 					</div>
 		`
 		$(this.position_id).html(html);
-		$(document).on("click",".info",()=>{
-					var info = new customer_cate(".info-table");
+		$(document).on("click",".info_ship",()=>{
+					var info = new ship_cate(".info-table");
 					info.addArg('cate',event.target.id);
 					info.cate = event.target.id;
 					info.run();
