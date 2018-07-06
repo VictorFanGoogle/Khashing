@@ -116,13 +116,9 @@ class home_index extends ActionHandler{
 		$(document).on("keyup",".info_search",()=>{
             var input, filter, table, tr, td, i;
             input = document.getElementById("info_search");
-            console.log(input)
             filter = input.value.toUpperCase();
-            console.log(filter)
             table = document.getElementById("info_tbody");
-            console.log(table)
             tr = table.getElementsByTagName("tr");
-            console.log(tr)
             for (i = 0; i < tr.length; i++) {
                 for(var j = 0;j<tr[i].getElementsByTagName('td').length;j++){
                     var check = 0;

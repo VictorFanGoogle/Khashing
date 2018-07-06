@@ -8,13 +8,13 @@ class customer_showPage extends ActionHandler{
 		var self=this;
 		self.loadModuleScript("customer","cate");
 		var html = `
-					<div class="content_header">&nbsp;客戶資料</div>
+					<div class="content_header">&nbsp;客 戶 資 料</div>
 					<div class="content_choose">
-						<button class="btn btn-primary theme-style content_choose info" id="berth_customer">停泊客戶</button>
-						<button class="btn btn-outline-secondary content_choose info" id="rent_customer">租賃客戶</a>
-						<button class="btn btn-outline-secondary content_choose info" id="rentland_customer">陸域租戶</a>
-						<button class="btn btn-outline-secondary content_choose info" id="repair_customer">維修客戶</a>
-					    <button class="btn btn-outline-secondary content_choose info" id="port_customer">下水碼頭客戶</a>
+						<button class="btn btn-primary theme-style content_choose info" id="berth_customer">&nbsp;停 泊 客 戶&nbsp;</button>
+						<button class="btn btn-outline-secondary content_choose info" id="rent_customer">&nbsp;租 賃 客 戶&nbsp;</button>
+						<button class="btn btn-outline-secondary content_choose info" id="rentland_customer">&nbsp;陸 域 租 戶&nbsp;</button>
+						<button class="btn btn-outline-secondary content_choose info" id="repair_customer">&nbsp;維 修 客 戶&nbsp;</button>
+					    <button class="btn btn-outline-secondary content_choose info" id="port_customer">下水碼頭客戶</button>
 					</div>
 					<div class="content_content">
 						<table class="table info-table">

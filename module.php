@@ -5,6 +5,10 @@
 	require_once __ROOT__."/include/php/model.php";
 	require_once __ROOT__."/include/php/actionListener.php";
 	session_start();
+<<<<<<< HEAD
+=======
+	/**/
+>>>>>>> b34cd83144a49341b88bea456578875aced03b97
 	echo json_encode((new Main())->run());
 	class Main{
 		function __construct(){
@@ -40,4 +44,8 @@
 			// }
 		}
 	}
+<<<<<<< HEAD
 ?> 
+=======
+?>
+>>>>>>> b34cd83144a49341b88bea456578875aced03b97
