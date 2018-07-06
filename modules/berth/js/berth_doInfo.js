@@ -5,6 +5,13 @@ class berth_doInfo extends ActionHandler{
 		this.php=true;
 	}
 	ajaxSuccess(data){
+		this.setBarInfo();
+		this.data = data.table;
+		this.BarArray = [];
+		for(let i in this.data){
+			this.getBetweenBarsOfStartAndEnd(this.data[i]);
+			console.log(this.BarArray)
+		}
 	    let F_initLeft = 1;
 	    let F_width = 2;
 	    let F_height = 7;
@@ -401,5 +408,156 @@ class berth_doInfo extends ActionHandler{
 	    }
 	    return data;
 	}
-	showResult(){}
+	setBarInfo(){
+		this.BarOrder = ["F3","F2","F1","G2","G1","D1","D2","D3","H3","C1","C2","H2","B1","B2","H1","A1","A2"];
+		// this.F_Left = ["F3-f1","F3-f3","F3-f5","F3-f7","F2-f1","F2-f3","F2-f5","F2-f7","F1-f1","F1-f3","F1-f5","F1-f7","G2-g1"];
+		// this.F_Right_And_D_Left = ["F3-f2","F3-f4","F3-f6","F3-f8","F2-f2","F2-f4","F2-f6","F2-f8","F1-f2","F1-f4","F1-f6","F1-f8","G2-g2","G2-g3",
+		// "G2-g4","G2-g5","G2-g6","G2-g7","G2-g8","D1-d4","D1-d3","D1-d2","D1-d1","D2-d6","D2-d5","D2-d3","D2-d1","D3-d7","D3-d5","D3-d3","D3-d1"];
+		// this.D_Right_And_C_Left = ["D3-d2","D3-d4","D3-d6","D3-d8","D2-d2","D2-d4","H3-e1","H3-e2","H3-e3","H3-e4","H3-e5","C1-"];
+	}
+	getBetweenBarsOfStartAndEnd(info){
+		let startArea = info.StartBerthIndex.split("-")[0];
+		let endArea = info.EndBerthIndex.split("-")[0];
+		let startBar = info.StartBerthIndex.split("-")[1];
+		let endBar = info.EndBerthIndex.split("-")[1];
+		let startIndex = this.BarOrder.indexOf(startArea);
+		let endIndex = this.BarOrder.indexOf(endArea);
+		let Switch = false;
+		let NowInfo = [];
+		console.log(startIndex + " " + endIndex)
+		for(let i = (startIndex <= endIndex ? startIndex : endIndex) ; i <= (startIndex >= endIndex ? startIndex : endIndex) ; i++){
+			console.log(this.BarOrder[i])
+			let word = this.BarOrder[i].split("")[0].toLowerCase();
+			let tmp = [];
+			switch(this.BarOrder[i]){
+				case "G2":
+					if(startBar.split("")[1] % 2 == 0){
+						for(let j = 2 ; j <= 4 ; j++){
+							if(this.BarOrder[i] + "-" + word + j === info.StartBerthIndex){
+								Switch = true;
+							}
+							if(Switch){
+								tmp.push(this.BarOrder[i] + "-" + word + j);
+							}
+							if(this.BarOrder[i] + "-" + word + j === info.EndBerthIndex){
+								Switch = false;
+							}
+						}
+					}else{
+						tmp.push(this.BarOrder[i] + "-" + word + "1");
+						Switch = false;
+					}
+					break;
+				case "G1":
+					if(startBar.split("")[1] % 2 == 0){
+						for(let j = 5 ; j <= 8 ; j++){
+							if(this.BarOrder[i] + "-" + word + j === info.StartBerthIndex){
+								Switch = true;
+							}
+							if(Switch){
+								tmp.push(this.BarOrder[i] + "-" + word + j);
+							}
+							if(this.BarOrder[i] + "-" + word + j === info.EndBerthIndex){
+								Switch = false;
+							}
+						}
+					}
+					break;
+				case "D1":
+					if(startBar.split("")[1] % 2 == 0){
+						for(let j = 4 ; j >= 1 ; j--){
+							if(this.BarOrder[i] + "-" + word + j === info.StartBerthIndex){
+								Switch = true;
+							}
+							if(Switch){
+								tmp.push(this.BarOrder[i] + "-" + word + j);
+							}
+							if(this.BarOrder[i] + "-" + word + j === info.EndBerthIndex){
+								Switch = false;
+							}
+						}
+					}
+					break;
+				case "D2":
+					if(startBar.split("")[1] % 2 == 0){
+						let D2Info = [6,5,3,1];
+						for(let j in D2Info){
+							if(this.BarOrder[i] + "-" + word + D2Info[j] === info.StartBerthIndex){
+								Switch = true;
+							}
+							if(Switch){
+								tmp.push(this.BarOrder[i] + "-" + word + D2Info[j]);
+							}
+							if(this.BarOrder[i] + "-" + word + D2Info[j] === info.EndBerthIndex){
+								Switch = false;
+							}
+						}
+					}
+					break;
+				case "H3":
+					if(startBar.split("")[1] % 2 == 0){
+						let H_word = "e";
+						for(let j = 1 ; j <= 5 ; j++){
+							if(this.BarOrder[i] + "-" + H_word + j === info.StartBerthIndex){
+								Switch = true;
+							}
+							if(Switch){
+								tmp.push(this.BarOrder[i] + "-" + H_word + j);
+							}
+							if(this.BarOrder[i] + "-" + H_word + j === info.EndBerthIndex){
+								Switch = false;
+							}
+						}
+					}
+				case "H2":
+					if(startBar.split("")[1] % 2 == 0){
+						let H_word = "e";
+						for(let j = 1 ; j <= 6 ; j++){
+							if(this.BarOrder[i] + "-" + H_word + j === info.StartBerthIndex){
+								Switch = true;
+							}
+							if(Switch){
+								tmp.push(this.BarOrder[i] + "-" + H_word + j);
+							}
+							if(this.BarOrder[i] + "-" + H_word + j === info.EndBerthIndex){
+								Switch = false;
+							}
+						}
+					}
+				case "H1":
+					console.log();
+					break;
+				default:
+					if(startBar.split("")[1] % 2 == 0){
+						for(let j = 2 ; j <= 8 ; j += 2){
+							if(this.BarOrder[i] + "-" + word + j === info.StartBerthIndex){
+								Switch = true;
+							}
+							if(Switch){
+								tmp.push(this.BarOrder[i] + "-" + word + j);
+							}
+							if(this.BarOrder[i] + "-" + word + j === info.EndBerthIndex){
+								Switch = false;
+							}
+						}
+					}else{
+						for(let j = 1 ; j <= 7 ; j += 2){
+							if(this.BarOrder[i] + "-" + word + j === info.StartBerthIndex){
+								Switch = true;
+							}
+							if(Switch){
+								tmp.push(this.BarOrder[i] + "-" + word + j);
+							}
+							if(this.BarOrder[i] + "-" + word + j === info.EndBerthIndex){
+								Switch = false;
+							}
+						}
+					}
+					break;
+			}
+			NowInfo.push(tmp);
+		}
+		this.BarArray.push(NowInfo);
+		
+	}
 }
