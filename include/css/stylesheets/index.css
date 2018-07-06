@@ -148,3 +148,19 @@ body {
   margin-left: 20px;
   margin-top: 20px;
 }
+
+/*fullcalendar*/
+/* line 131, ../sass/index.scss */
+.fc .fc-today.alert.alert-info {
+  background-color: #e6eeff;
+  color: black;
+}
+/* line 135, ../sass/index.scss */
+.fc .fc-header.card-header, .fc .table-active {
+  background-color: #142440;
+  color: white;
+}
+/* line 139, ../sass/index.scss */
+.fc .fc-event {
+  cursor: pointer;
+}
