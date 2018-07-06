@@ -121,23 +121,6 @@ body {
   margin: 20px;
   font-size:1.5rem;
 }
-<<<<<<< HEAD
-/*fullcalendar*/
-.fc {
-  .fc-today.alert.alert-info {
-    background-color:#e6eeff;
-    color:black;
-  }
-  .fc-header.card-header,.table-active {
-    background-color:$theme-secondary-color;
-    color: white;
-  }
-  .fc-event{
-    cursor: pointer;
-  }
-}
-=======
-
 .btn-color {
   background-color: $theme-secondary-color;
   border-color: $theme-secondary-color;
@@ -152,4 +135,17 @@ body {
   margin-left: 20px;
   margin-top: 20px;
 }
->>>>>>> 92c753b8877d00e32eb1736e424ac349fc35265e
+/*fullcalendar*/
+.fc {
+  .fc-today.alert.alert-info {
+    background-color:#e6eeff;
+    color:black;
+  }
+  .fc-header.card-header,.table-active {
+    background-color:$theme-secondary-color;
+    color: white;
+  }
+  .fc-event{
+    cursor: pointer;
+  }
+}
