@@ -6,7 +6,6 @@ class customer_cate extends ActionHandler {
     }
     ajaxSuccess(data) {
         var self = this;
-        console.log(data)
         data = data['table'];
         var html = `<thead><tr>
 			<th scope="col">姓名</th>

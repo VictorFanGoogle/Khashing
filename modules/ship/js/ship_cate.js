@@ -6,32 +6,31 @@ class ship_cate extends ActionHandler {
     }
     ajaxSuccess(data) {
         var self = this;
-        console.log(data)
         data = data['table'];
         var html = `<thead><tr>
-			<th scope="col">姓名</th>
-			<th scope="col">電話</th>
-			<th scope="col">船名</th>
-			<th scope="col">公司</th>
-			<th scope="col">公司電話</th>
-			<th scope="col">統編	</th>
-			<th scope="col">Email</th>
-			<th scope="col">地址</th>
-			<th scope="col">負責人</th>
-			<th scope="col">負責人電話</th>
+			<th scope="col">船體名稱(船號)</th>
+			<th scope="col">船型</th>
+			<th scope="col">種類</th>
+			<th scope="col">船主</th>
+			<th scope="col">船長</th>
+			<th scope="col">船寬	</th>
+			<th scope="col">船重</th>
+			<th scope="col">吃水</th>
+			<th scope="col">電壓</th>
+			<th scope="col">Hz</th>
 			</tr></thead><tbody><tr>`;
         console.log(data['0'])
         for (var i = 0; i < data.length; i++) {
-            html += '<td id="'+data[i]['CustomerID']+'">'+data[i]['CustomerName']+'</td>';
-            html += '<td>'+data[i]['CustomerPhoneNum']+'</td>';
             html += '<td id="'+data[i]['ShipID']+'">'+data[i]['ShipName']+'</td>';
-            html += '<td>'+data[i]['CompanyName']+'</td>';
-            html += '<td>'+data[i]['CompanyPhone']+'</td>';
-            html += '<td>'+data[i]['GUINumID']+'</td>';
-            html += '<td>'+data[i]['Email']+'</td>';
-            html += '<td>'+data[i]['Addres']+'</td>';
-            html += '<td>'+data[i]['ContactName']+'</td>';
-            html += '<td>'+data[i]['ContactPhone']+'</td></tr>';
+            html += '<td>'+data[i]['ShipBrandsName']+'</td>';
+            html += '<td>'+data[i]['ShipKindName']+'</td>';
+            html += '<td id="'+data[i]['CustomerID']+'">'+data[i]['CustomerName']+'</td>';
+            html += '<td>'+data[i]['ShipLength']+'</td>';
+            html += '<td>'+data[i]['ShipWidth']+'</td>';
+            html += '<td>'+data[i]['ShipWeight']+'</td>';
+            html += '<td>'+data[i]['Draught']+'</td>';
+            html += '<td>'+data[i]['Volt']+'</td>';
+            html += '<td>'+data[i]['Hz']+'</td></tr>';
         }
         html += '</tbody>';
         var lastid = "#" + $('.btn-primary').attr('id');
