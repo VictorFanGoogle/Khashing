@@ -121,7 +121,6 @@ body {
   margin: 20px;
   font-size:1.5rem;
 }
-
 .btn-color {
   background-color: $theme-secondary-color;
   border-color: $theme-secondary-color;
@@ -135,4 +134,18 @@ body {
 .content_content {
   margin-left: 20px;
   margin-top: 20px;
+}
+/*fullcalendar*/
+.fc {
+  .fc-today.alert.alert-info {
+    background-color:#e6eeff;
+    color:black;
+  }
+  .fc-header.card-header,.table-active {
+    background-color:$theme-secondary-color;
+    color: white;
+  }
+  .fc-event{
+    cursor: pointer;
+  }
 }

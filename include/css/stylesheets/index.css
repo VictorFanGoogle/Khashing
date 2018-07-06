@@ -141,20 +141,36 @@ body {
   font-size: 1.5rem;
 }
 
-/* line 125, ../sass/index.scss */
+/* line 124, ../sass/index.scss */
 .btn-color {
   background-color: #142440;
   border-color: #142440;
   color: white;
 }
 
-/* line 131, ../sass/index.scss */
+/* line 130, ../sass/index.scss */
 .content_choose {
   margin-left: 20px;
 }
 
-/* line 135, ../sass/index.scss */
+/* line 134, ../sass/index.scss */
 .content_content {
   margin-left: 20px;
   margin-top: 20px;
+}
+
+/*fullcalendar*/
+/* line 140, ../sass/index.scss */
+.fc .fc-today.alert.alert-info {
+  background-color: #e6eeff;
+  color: black;
+}
+/* line 144, ../sass/index.scss */
+.fc .fc-header.card-header, .fc .table-active {
+  background-color: #142440;
+  color: white;
+}
+/* line 148, ../sass/index.scss */
+.fc .fc-event {
+  cursor: pointer;
 }

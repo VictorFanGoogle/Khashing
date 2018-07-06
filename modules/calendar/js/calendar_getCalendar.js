@@ -9,19 +9,28 @@ class calendar_getCalendar extends ActionHandler{
 	showResult(){
 		var html=`
 			<div class="row mt-2>
-				<div id="`+this.calendar_id+`list" class="mt-2 col-sm-2"></div>
-				<div id="`+this.calendar_id+`view" class="mt-2 col-sm-10" style="height:98vh">
+				<div id="`+this.calendar_id+`-list" class="mt-2 col-sm-2">
+				`+this.showList()+`
+				</div>
+				<div id="`+this.calendar_id+`-view" class="mt-2 col-sm-10" style="height:98vh">
 					<div id="`+this.calendar_id+`"></div>
 				</div>
 				
-			</div
+			</div>
 			
 		`;
 		$(this.position_id).html(html);
 		this.createCalendar();
 	}
+	showList(){
+		var html=`
+				<div id="`+this.calendar_id+`-create" class="btn btn-primary theme-style">建立行程</div>
+		`
+		return html;
+	}
 	//建立行事曆
 	createCalendar(){
+		var self=this;
 		$("#"+this.calendar_id).fullCalendar({
 			locale:"zh-tw",
 			height:"parent",
@@ -31,66 +40,26 @@ class calendar_getCalendar extends ActionHandler{
 				center: 'title',
 				right: 'month,agendaWeek,agendaDay,listMonth'
 			},
-		    eventLimit:true, // allow "more" link when too many events
-		    events:[
-		        {
-		          title: 'All Day Event',
-		          start: '2018-07-05',
-		          color:"#FF8C00"
-		          
-		        },
-		        {
-		          title: 'Long Event',
-		          start: '2018-07-07',
-		          end: '2018-07-10'
-		        },
-		        {
-		          id: 999,
-		          title: 'Repeating Event',
-		          start: '2018-07-05T16:00:00'
-		        },
-		        {
-		          id: 999,
-		          title: 'Repeating Event',
-		          start: '2018-07-05T16:00:00'
-		        },
-		        {
-		          title: 'Conference',
-		          start: '2018-07-11',
-		          end: '2018-07-13'
-		        },
-		        {
-		          title: 'Meeting',
-		          start: '2018-07-12T10:30:00',
-		          end: '2018-07-12T12:30:00'
-		        },
-		        {
-		          title: 'Lunch',
-		          start: '2018-07-12T12:00:00'
-		        },
-		        {
-		          title: 'Meeting',
-		          start: '2018-07-12T14:30:00'
-		        },
-		        {
-		          title: 'Happy Hour',
-		          start: '2018-07-12T17:30:00'
-		        },
-		        {
-		          title: 'Dinner',
-		          start: '2018-07-12T20:00:00'
-		        },
-		        {
-		          title: 'Birthday Party',
-		          start: '2018-07-13T07:00:00'
-		        },
-		        {
-		          title: 'Click for Google',
-		          url: 'http://google.com/',
-		          start: '2018-07-28'
-		        }
-		    ],
-		    eventColor: 'rgb(20,36,64)'
+			//資料
+			events:self.data,
+		    eventLimit:true,
+		    eventColor: 'rgb(20,36,64)',
+		    //日期事件
+		    selectable:true,
+		    dayClick: (date,jsEvent, view)=>{
+		    	console.log(date.format());
+			},
+			select: (startDate, endDate)=>{
+				endDate=moment(endDate).add(-1, 'days');
+				alert('selected ' + startDate.format() + ' to ' + endDate.format());
+			},
+			//資料事件
+			eventClick: (eventObj)=>{
+				console.log(eventObj)
+			},
+			eventMouseover:(event, jsEvent, view)=>{
+
+			}
 		});
 	}
 }
