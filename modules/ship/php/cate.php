@@ -1,30 +1,30 @@
 <?php
-    require_once __ROOT__."/modules/customer/customer_model.php";
+    require_once __ROOT__."/modules/ship/ship_model.php";
     class cate implements actionListener{
 		function ActionPerFormed($post){
-			$customer_model = new customer_model();
+			$ship_model = new ship_model();
 			$cate=$post->getPost();
 			
 			switch ($cate['cate']) {
-			    case 'berth_customer':
-			     $sql='SELECT Customer.CustomerID,`CustomerName`,`CustomerPhoneNum`,`CompanyName`,`CompanyPhone`,`ContactName`,`ContactPhone`,`Email`,`Addres`,`GUINumID`, Ship.ShipName, Ship.ShipID FROM `Customer` JOIN `Ship` ON Customer.CustomerID = Ship.CustomerID JOIN `Berth` ON Berth.ShipID = Ship.ShipID';
+			    case 'our_ship':
+			     $sql='SELECT Customer.CustomerID,CustomerName,ShipID,ShipName,ShipBrandsName,ShipLength,ShipWidth,ShipHeight,ShipCategoryName,ShipKindName,Draught,Volt,Hz,ShipWeight FROM `Ship` JOIN ShipBrands ON Ship.ShipBrandsID = ShipBrands.ShipBrandsID JOIN ShipCategory ON Ship.ShipCategoryID = ShipCategory.ShipCategoryID JOIN ShipKind ON Ship.ShipKindID = ShipKind.ShipKindID JOIN Customer ON Customer.CustomerID = Ship.CustomerID';
 			        break;
-			    case 'rent_customer':
+			    case 'berth_ship':
 
 			        break;
-			    case 'rentland_customer':
+			    case 'rent_ship':
 
 			        break;
-			    case 'port_customer':
+			    case 'repair_ship':
 
-			        break;
-			    case 'repair_customer':
+			        break;	
+			    case 'port_ship':
 
 			        break;
 			}
 			
 			
-			$result=$customer_model->sql($sql);
+			$result=$ship_model->sql($sql);
 			return $result;
 		}
 	}

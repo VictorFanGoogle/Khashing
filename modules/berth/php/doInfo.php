@@ -3,7 +3,7 @@
     class doInfo implements actionListener{
 		function ActionPerFormed($post){
 			$berth_model = (new berth_model());
-			$result = $berth_model->test();
+			$result = $berth_model->getAllBerthInfo();
 			return $result;
 		}
 	}
